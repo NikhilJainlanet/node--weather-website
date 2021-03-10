@@ -7,7 +7,7 @@ const msg2=document.querySelector('#msg-2')
 weatherform.addEventListener('submit',(e)=>{
     e.preventDefault()
     const locaton =search.value
-    fetch('http://localhost:3000/weather?address='+locaton).then((response)=>{
+    fetch('/weather?address='+locaton).then((response)=>{
     response.json().then((data)=>{
         if(data.error){
             msg1.textContent=data.error
