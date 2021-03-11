@@ -12,7 +12,7 @@ const forcast=(address, callback)=>{
             
                 }
                 else{
-               callback(undefined,"It is currently "+body.current.temperature+" degree out.There is "+body.current.precip+" % chance of rain")
+               callback(undefined,"It is currently "+body.current.temperature+" degree out.There is "+body.current.precip+" % chance of rain. The Local time  at "+body.location.name+ " is "+body.location.localtime)
              }})
     
 }
